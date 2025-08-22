@@ -1,0 +1,445 @@
+{
+    "content": {
+      "intro": [
+        {
+            "introHeading" : "Welcome to Ascend Experience!",
+            "introDesc" : ["You are the Portfolio Manager for a national retail bank (Vision Connect Financial) operating in an unpredictable economic climate","You will need to harness the Ascend Platform to grow the business safely and profitably while navigating market shocks, emerging risks, and evolving customer behaviour."]
+        }
+      ],
+      "team": [
+        {
+            "teamHeading" : "Meet your team",
+            "teamDesc" : "You won't do it alone. Reporting to you are the critical team members.",
+            "teamSubDesc" : "Each brings vital skills and experience using Ascend that will affect your overall performance"
+        }
+      ],
+      "goal": [
+        {
+            "goalHeading" : "Your goals",
+            "goalDesc" : "Over the course of the next quarter, your team will respond to real-world events and evolving data to:",
+            "goalList" : [
+                "Grow the lending portfolio","Maintain strong profitability","Minimise fraud exposure"
+            ]
+        }
+      ],
+      "yourselfForm": [
+        {
+            "formHeading" : "Tell us about yourself",
+            "formDesc" : "Help us get to know you better. Complete the form below to tailor your Ascend experience.",
+            "formTermsCondition" : "By participating in this experience you, agree that Experian may contact you with information about products and services related to your business needs. Your details may be used to provide insights in accordance with our privacy policy.",
+            "formfields" : [
+
+                {
+                    "label" : "Full Name",
+                    "placeholder" : "Enter your full name",
+                    "type" : "input"
+
+                },
+                {
+                    "label" : "Email",
+                    "placeholder" : "Enter your email",
+                    "type" : "input"
+                },
+                {
+                    "label" : "I agree",
+                    "type" : "checkbox"
+                }
+            ]
+        }
+      ]
+
+    },
+  "screens": {
+    "Talia": [
+      {
+        "id": "recommendations",
+        "role" : "Data analyst",
+        "type": "multipleSelect",
+        "title": "Share two recommendations with the team",
+        "helpText": "Dummy Content",
+        "options": [
+          {
+            "id": "s1q1o1",
+            "text": "Tighten approval/decline thresholds to reduce misclassification risk"
+          },
+          {
+            "id": "s1q1o2",
+            "text": "Introduce temporary manual review for a wider score band to mitigate risk until the model is refreshed"
+          },
+          {
+            "id": "s1q1o3",
+            "text": "Increase monitoring frequency to daily to detect further deterioration early"
+          }
+        ],
+        "defaultSelected": [
+          "s1q1o1",
+          "s1q1o2"
+        ]
+      },
+      {
+        "id": "selectModel",
+        "type": "single",
+        "title": "Choose a model build",
+        "helpText": "Dummy Content",
+        "options": [
+          {
+            "id": "s1q2o1",
+            "modelName": "Logistic regression",
+            "modelAccuracy": 2,
+            "timeToBuild": 1
+          },
+          {
+            "id": "s1q2o2",
+            "modelName": "Random forest",
+            "modelAccuracy": 4,
+            "timeToBuild": 3
+          },
+          {
+            "id": "s1q2o3",
+            "modelName": "XGBoost",
+            "modelAccuracy": 5,
+            "timeToBuild": 4
+          }
+        ],
+        "defaultSelected": [
+          "s1q2o1"
+        ]
+      },
+      {
+        "tasks" : [
+          {
+            "id": "selectModel",
+            "type": "single",
+            "title": "Choose a model build",
+            "helpText": "Dummy Content",
+            "options": [
+              {
+                "id": "s1q2o1",
+                "modelName": "Logistic regression",
+                "modelAccuracy": 2,
+                "timeToBuild": 1
+              },
+              {
+                "id": "s1q2o2",
+                "modelName": "Random forest",
+                "modelAccuracy": 4,
+                "timeToBuild": 3
+              },
+              {
+                "id": "s1q2o3",
+                "modelName": "XGBoost",
+                "modelAccuracy": 5,
+                "timeToBuild": 4
+              }
+            ],
+            "defaultSelected": [
+              "s1q2o1"
+            ]
+          },
+          {
+            "id": "recommendations",
+            "role" : "Data analyst",
+            "type": "multipleSelect",
+            "title": "Share two recommendations with the team",
+            "helpText": "Dummy Content",
+            "options": [
+              {
+                "id": "s1q1o1",
+                "text": "Tighten approval/decline thresholds to reduce misclassification risk"
+              },
+              {
+                "id": "s1q1o2",
+                "text": "Introduce temporary manual review for a wider score band to mitigate risk until the model is refreshed"
+              },
+              {
+                "id": "s1q1o3",
+                "text": "Increase monitoring frequency to daily to detect further deterioration early"
+              }
+            ],
+            "defaultSelected": [
+              "s1q1o1",
+              "s1q1o2"
+            ]
+          }
+        ],
+        "recommandations" : [
+          {},
+          {}
+        ]
+      }
+    ],
+    "Markus": [
+      {
+        "id": "s2q1",
+        "type": "rangeSliderTwoIndicators",
+        "title": "Update score cutoffs",
+        "helpText": "Dummy Content",
+        "description": "Drag the indicators to set the scores that trigger declines and approvals",
+        "range": {
+          "minRange": 100,
+          "maxRange": 900
+        },
+        "defaultRange": {
+          "minRange": 700,
+          "maxRange": 750
+        },
+        "approveScore": 750,
+        "declineScore": 600
+      },
+      {
+        "id": "s2q2",
+        "type": "policyGroup",
+        "title": "Update policies",
+        "helpText": "Dummy Content",
+        "description": "Define the policies and rules that trigger them",
+        "policies": [
+          {
+            "id": "s2q2q1",
+            "title": "Derogatory bureau data",
+            "description": "Worst current status on the bureau",
+            "type": "valueFilter",
+            "defaultValue": 2,
+            "decisions": [
+              {
+                "text": "Accept",
+                "value": "Accept"
+              },
+              {
+                "text": "Refer",
+                "value": "Refer"
+              },
+              {
+                "text": "Decline",
+                "value": "Decline"
+              }
+            ]
+          },
+          {
+            "id": "s2q2q2",
+            "title": "Bankruptcy",
+            "description": "Bankruptcy",
+            "type": "toggleFilter",
+            "decisions": [
+              {
+                "text": "Accept",
+                "value": "Accept"
+              },
+              {
+                "text": "Refer",
+                "value": "Refer"
+              },
+              {
+                "text": "Decline",
+                "value": "Decline"
+              }
+            ]
+          },
+          {
+            "id": "s2q2q3",
+            "title": "Thin File",
+            "description": "Number of active credit accounts",
+            "type": "valueFilter",
+            "decisions": [
+              {
+                "text": "Accept",
+                "value": "Accept"
+              },
+              {
+                "text": "Refer",
+                "value": "Refer"
+              },
+              {
+                "text": "Decline",
+                "value": "Decline"
+              }
+            ]
+          },
+          {
+            "id": "s2q2q4",
+            "title": "Insufficient Income",
+            "description": "Disposable income % age",
+            "range": {
+              "minRange": 0,
+              "maxRange": 100
+            },
+            "defaultRange": 40,
+            "type": "rangeFilter",
+            "decisions": [
+              {
+                "text": "Accept",
+                "value": "Accept"
+              },
+              {
+                "text": "Refer",
+                "value": "Refer"
+              },
+              {
+                "text": "Decline",
+                "value": "Decline"
+              }
+            ]
+          },
+          {
+            "id": "s2q2q5",
+            "title": "High number of Recent Credit Applications",
+            "description": "Previous hard searches in last 3 months",
+            "type": "valueFilter",
+            "defaultValue": 3,
+            "decisions": [
+              {
+                "text": "Accept",
+                "value": "Accept"
+              },
+              {
+                "text": "Refer",
+                "value": "Refer"
+              },
+              {
+                "text": "Decline",
+                "value": "Decline"
+              }
+            ]
+          },
+          {
+            "id": "s2q2q6",
+            "title": "Negative History with the Issuer",
+            "description": "Past due on any open account",
+            "type": "toggleFilter",
+            "decisions": [
+              {
+                "text": "Accept",
+                "value": "Accept"
+              },
+              {
+                "text": "Refer",
+                "value": "Refer"
+              },
+              {
+                "text": "Decline",
+                "value": "Decline"
+              }
+            ]
+          },
+          {
+            "id": "s2q2q7",
+            "title": "Frozen Credit Reports - Refer",
+            "description": "Frozen credit report flag",
+            "type": "toggleFilter",
+            "decisions": [
+              {
+                "text": "Accept",
+                "value": "Accept"
+              },
+              {
+                "text": "Refer",
+                "value": "Refer"
+              },
+              {
+                "text": "Decline",
+                "value": "Decline"
+              }
+            ]
+          },
+          {
+            "id": "s2q2q8",
+            "title": "Too Many Existing Credit Cards - Refer",
+            "description": "Number of existing credit cards",
+            "type": "valueFilter",
+            "defaultValue": 5,
+            "decisions": [
+              {
+                "text": "Accept",
+                "value": "Accept"
+              },
+              {
+                "text": "Refer",
+                "value": "Refer"
+              },
+              {
+                "text": "Decline",
+                "value": "Decline"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Kendra": [
+      {
+        "id": "s3q1",
+        "type": "dragDrop",
+        "title": "Build a fraud prevention and ID verification orchestration",
+        "description": "Pick the four fraud prevention and identity verification services you think could elp and arrange them in the order you think is most effective. The catch - each service costs the business to call so the quicker you can verify a good customer or spot potential fraud, the better.",
+        "helpText": "You will win points for choosing the most effective combination of services and placing them in the right order. Extra points will also be awarded for pairing the service with the related decline or review reason.",
+        "listOne": [
+          {
+            "id": "s3q1o1",
+            "text": "PII verification"
+          },
+          {
+            "id": "s3q1o2",
+            "text": "Document verification"
+          },
+          {
+            "id": "s3q1o3",
+            "text": "Email risk scoring"
+          },
+          {
+            "id": "s3q1o4",
+            "text": "Income verification"
+          },
+          {
+            "id": "s3q1o5",
+            "text": "Social security number (SSN) verification"
+          },
+          {
+            "id": "s3q1o6",
+            "text": "PEPs and Sanctions screening"
+          },
+          {
+            "id": "s3q1o7",
+            "text": "One time passcode (OTP)"
+          },
+          {
+            "id": "s3q1o8",
+            "text": "Knowledge-based authentication"
+          }
+        ],
+        "listTwo": [
+          {
+            "id": "s3q1o1",
+            "text": "BOT detected"
+          },
+          {
+            "id": "s3q1o2",
+            "text": "Disposable email detected"
+          },
+          {
+            "id": "s3q1o3",
+            "text": "Document tampering detected"
+          },
+          {
+            "id": "s3q1o4",
+            "text": "Mismatch income information"
+          },
+          {
+            "id": "s3q1o5",
+            "text": "SSN belongs to deceased individual"
+          },
+          {
+            "id": "s3q1o6",
+            "text": "Mismatch to  country sanction list"
+          },
+          {
+            "id": "s3q1o7",
+            "text": "KBA incorrectly answered multiple times)"
+          },
+          {
+            "id": "s3q1o8",
+            "text": "Incorrect passcode entries"
+          }
+        ]
+      }
+    ]
+  }
+}
